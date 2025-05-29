@@ -6,7 +6,7 @@ const Popular = () => {
   const [popularProducts, setPopularProducts] = useState([]);
   
     useEffect(() => {
-      fetch('http://localhost:4000/popularitems')
+      fetch('https://novabackend-1byq.onrender.com/popularitems')
       .then((response) => response.json())
       .then((data) => setPopularProducts(data));
     }, [])
