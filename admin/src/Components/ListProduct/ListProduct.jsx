@@ -6,7 +6,7 @@ const ListProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   const fetchInfo = async () => {
-    await fetch('https://novabackend-1byq.onrender.com/allproducts')
+    await fetch('https://novabackend-xaio.onrender.com/allproducts')
     .then((res) => res.json())
     .then((data) => {setAllProducts(data)});
   }
@@ -17,7 +17,7 @@ const ListProduct = () => {
 
 
   const remove_product = async (id) => {
-    await fetch('https://novabackend-1byq.onrender.com/removeproduct', {
+    await fetch('https://novabackend-xaio.onrender.com/removeproduct', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
