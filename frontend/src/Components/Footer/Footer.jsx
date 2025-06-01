@@ -4,6 +4,8 @@ import footer_logo from '../Assets/navlogo1.png';
 import instagram_icon from '../Assets/instagram_icon.png';
 import facebook_icon from '../Assets/facebook_icon.png';
 import mail_icon from '../Assets/mail_icon.png';
+import { Link } from 'react-router-dom';
+
 
 const Footer = () => {
   return (
@@ -27,7 +29,9 @@ const Footer = () => {
                 <img src={facebook_icon} alt="" />
             </div>
             <div className="footer-icons-container">
-                <img style={{ paddingTop: '3px' }} src={mail_icon} alt="" />
+                <Link href="mailto:info@novaandcoltd.top?subject=Inquiry from NOVA Website&body=Hello Nova&Co,"
+  target="_blank"
+  rel="noopener noreferrer"><img style={{ paddingTop: '3px' }} src={mail_icon} alt="" /></Link>
             </div>
         </div>
         <div className="footer-copyright">

@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
 
 // ✅ Configure Cloudinary directly (no .env)
 cloudinary.config({
-    cloud_name: 'dfmxdqrho',
-    api_key: '557818767246122',
-    api_secret: 'zXROZp6dSO_7E1QZTHoNHsUZOuM',
+    cloud_name: 'dpsqcmkak',
+    api_key: '232674154366313',
+    api_secret: 'KrMa7QbCA7HH6VNeMBAKr-q5HmY',
 });
 
 // ✅ Setup Cloudinary storage
@@ -40,7 +40,7 @@ const upload = multer({ storage: storage });
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `http://localhost:${port}/images/${req.file.filename}`
+        image_url: req.file.path,
     });
 });
 
