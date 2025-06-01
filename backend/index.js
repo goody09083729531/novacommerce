@@ -40,7 +40,7 @@ const upload = multer({ storage: storage });
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: req.file.path,
+        image_url: `http://localhost:${port}/images/${req.file.filename}`
     });
 });
 

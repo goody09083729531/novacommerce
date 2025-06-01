@@ -6,7 +6,7 @@ const RelatedProducts = () => {
   const [relatedItems, setRelatedItems] = useState([]);
     
     useEffect(() => {
-      fetch('https://novabackend-hr27.onrender.com/relateditems')
+      fetch('http://localhost:4000/relateditems')
       .then((response) => response.json())
       .then((data) => setRelatedItems(data));
     }, [])
