@@ -4,10 +4,12 @@
   "private": true,
   "homepage": "https://novaandcoltd.top",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "emailjs-com": "^3.2.0",
     "react": "^19.1.0",
     "react-chatbotify": "^2.0.0-beta.38",
     "react-dom": "^19.1.0",

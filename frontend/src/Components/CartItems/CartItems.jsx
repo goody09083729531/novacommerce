@@ -55,7 +55,19 @@ const CartItems = () => {
                         <h3>${getTotalCartAmount()}</h3>
                     </div>
                 </div>
-                <button onClick={() => navigate('/makepayment', { state: { totalAmount: getTotalCartAmount() } })}>PROCEED TO CHECKOUT</button>
+                <button
+  onClick={() =>
+    navigate('/makepayment', {
+      state: {
+        totalAmount: getTotalCartAmount(),
+        cartItems: cartItems,
+        allProduct: all_product
+      }
+    })
+  }
+>
+  PROCEED TO CHECKOUT
+</button>
             </div>
             <div className="cartitems-promocode">
                 <p>If you have a promocode, Enter it here</p>

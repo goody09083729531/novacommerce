@@ -13,14 +13,22 @@ import lawnmower_banner from './Components/Assets/lawnmower_banner.png';
 import furniture_banner from './Components/Assets/furniture_banner.png';
 import MakePayment from './Pages/MakePayment';
 import LiveChatWidget from './Components/LiveChatWIdget';
+import { useEffect } from 'react';
 
 
 function App() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://embed.tawk.to/68395217679e18190a360c4c/1isfuhb2e";
+    script.async = true;
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
+  }, []);
   return (
     <div>
       <BrowserRouter>
         <Navbar />
-        {/* <LiveChatWidget /> */}
         <Routes>
           <Route path='/' element={<Shop />} />
           <Route path='/shoe' element={<ShopCategory banner={shoe_banner} category="shoe" />} />
